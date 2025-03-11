@@ -35,7 +35,19 @@
             </div>
         </div>
     </div>
+    <script>
 
+        const apiKey = "ecc6395681c8558c9ea8a26495b5611e";
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=cleveland&units=metric";
+
+        async function checkWeather() {
+            const response = await fetch(apiUrl + `&appid={apiKey}`);
+            var data = await response.json();
+
+            console.log(data);
+        }
+        checkWeather();
+    </script>
 
 </body>
 </html>
